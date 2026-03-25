@@ -13,4 +13,7 @@ echo "\nTransferindo...\n";
 for ($i = 0; $i < 5; $i++) {
     array_push($vetor2, $vetor1[$i]);
 }
-echo $vetor2[0] . ", " . $vetor2[1] . ", " . $vetor2[2] . ", " . $vetor2[3] . ", " . $vetor2[4];
+
+foreach ($vetor2 as $gru) {
+    echo $gru . ", ";
+}
