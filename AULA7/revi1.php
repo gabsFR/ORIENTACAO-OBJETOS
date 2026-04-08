@@ -25,6 +25,8 @@ do {
 
 
 //Saídas
-
+foreach ($paises as $guina) {
+    echo $guina["pais"]. " - ". $guina["cont"] ." - ". $guina["habit"] . "\n";
+}
 $soma = soma($paises);
-echo "\nA SOMA DE TODOS OS HABITANTES É: " . $soma;
+echo "\nA SOMA DE TODOS OS HABITANTES É: " . $soma . "\n";
