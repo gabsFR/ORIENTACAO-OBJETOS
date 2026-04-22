@@ -23,5 +23,5 @@ do {
     $retangulo->altura = readline("Informe a altura: ");
     $retangulo->area();
     $retangulo->peri();
-    $count++
+    $count++;
 } while ($count <= 3);
