@@ -82,16 +82,22 @@ foreach ($balatro as $jim) {
     echo $jim;
 }
 
+$acertou = false;
+
 do {
-    $palpite = readline("ESCOLHA A CARTA CERTA: ");
+    $palpite = readline("\nESCOLHA A CARTA CERTA OU APERTE 0 PARA DESISITIR: ");
+    if ($palpite == 0) {
+        echo "\nDESISTINDO...\n";
+        break;
+    }
     if($palpite == $lucky38->getNum()){
         echo "Voce acertou!\n";
         echo "\nA carta sorteada era " . $lucky38;
         $acertou = true;
+        break;
     }
     else{
-        echo "Tente novamente, voce errou\n";
+        echo "\nTente novamente, voce errou\n";
     }
     
-} while (!$lucky38);
-echo "VOCE GANHOU!";
+} while (!$acertou || $palpite != 0);
